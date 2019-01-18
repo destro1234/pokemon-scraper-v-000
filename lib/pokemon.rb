@@ -37,8 +37,9 @@ class Pokemon
       WHERE id = ?
       SQL
 
-    db.execute(sql, new_hp, self.id)
-    
+    new_poke = db.execute(sql, new_hp, self.id)
+    new_poke.save
+
   end
 
 
