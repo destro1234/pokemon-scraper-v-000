@@ -1,3 +1,4 @@
+require 'pry'
 class Pokemon
 
   attr_accessor :id, :name, :type, :db, :hp
@@ -33,9 +34,10 @@ class Pokemon
     sql = <<-SQL
       UPDATE pokemon
       SET hp = ?
+      WHERE id = ?
       SQL
 
-    db.execute(sql, new_hp)
+    db.execute(sql, new_hp, id)
 binding.pry
   end
 
