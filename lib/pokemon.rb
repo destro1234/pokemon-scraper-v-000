@@ -38,7 +38,6 @@ class Pokemon
       SQL
 
     db.execute(sql, new_hp, self.id)
-    binding.pry
   end
 
 
