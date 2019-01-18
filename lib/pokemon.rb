@@ -29,7 +29,7 @@ class Pokemon
     Pokemon.new(id: row[0], name: row[1], type: row[2], db: db)
   end
 
-  def alter_hp(newhp, db)
+  def alter_hp(new_hp, db)
     sql = <<-SQL
       UPDATE pokemon
       SET hp = ?
