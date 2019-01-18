@@ -37,7 +37,7 @@ class Pokemon
       WHERE id = ?
       SQL
 
-    db.execute(sql, new_hp, id)
+    db.execute(sql, new_hp, self.id)
 binding.pry
   end
 
